@@ -1,4 +1,5 @@
 import { TabNavigator } from 'react-navigation';
+import { Image } from 'react-native';
 import {
     Home,
     Favorites,
@@ -7,14 +8,12 @@ import {
     Settings
 } from '../screens';
 
-
-
 const Tab = TabNavigator({
         Home: {
             screen: Home
         },
         Favorites: {
-            screen: Favorites
+            screen: Favorites,
         },
         Categories: {
             screen: Categories
