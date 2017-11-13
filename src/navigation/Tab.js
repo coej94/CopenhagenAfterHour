@@ -1,6 +1,4 @@
-import {
-    TabNavigator
-} from 'react-navigation';
+import { TabNavigator } from 'react-navigation';
 import {
     Home,
     Favorites,
@@ -10,10 +8,10 @@ import {
 } from '../screens';
 
 
+
 const Tab = TabNavigator({
         Home: {
             screen: Home
-
         },
         Favorites: {
             screen: Favorites

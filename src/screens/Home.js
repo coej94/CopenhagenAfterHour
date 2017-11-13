@@ -7,6 +7,7 @@ const Home = () => {
       <Text style={styles.city}>
         København
       </Text>
+      
     </View>
   );
 };
