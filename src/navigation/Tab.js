@@ -37,5 +37,6 @@ const Tab = TabNavigator({
             activeTintColor: '#980c0c'
         }
     });
+     
 
 export default Tab;

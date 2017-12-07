@@ -1,13 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 
-const Plan = () => {
+export const Plan = () => {
   return (
     <View>
-      <Text>
-       Plan
-      </Text>
+      <Text>hej</Text>
     </View>
   );
 };
-export { Plan };
