@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import {
@@ -101,5 +101,5 @@ const Tab = TabNavigator({
             activeTintColor: '#980c0c'
         }
     });
-    
+
 export default Tab;
