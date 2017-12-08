@@ -101,13 +101,5 @@ const Tab = TabNavigator({
             activeTintColor: '#980c0c'
         }
     });
-
-
-const styles = {
-    icon: {
-      width: 26,
-      height: 26,
-      color: 'yellow'
-    },
-  };
+    
 export default Tab;
