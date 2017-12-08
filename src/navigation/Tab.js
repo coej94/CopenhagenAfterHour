@@ -1,28 +1,91 @@
+import React from "react";
 import { TabNavigator } from 'react-navigation';
-import { Image } from 'react-native';
+import { Icon } from 'react-native-elements';
 import {
     Home,
     Favorites,
     Categories,
-    Plan,
+    Maps,
     Settings
 } from '../screens';
 
 const Tab = TabNavigator({
         Home: {
-            screen: Home
+            screen: Home,
+            navigationOptions: {
+                tabBarLabel: 'Home',
+                tabBarIcon: ({ tintColor }) => (
+                    <Icon
+                    name='ios-home'
+                    type='ionicon'
+                    size={30}
+                    color={tintColor}
+
+                    />
+                )
+            },
         },
         Favorites: {
             screen: Favorites,
+            navigationOptions: {
+                tabBarLabel: 'Favorites',
+                tabBarIcon: ({ tintColor }) => (
+                    <Icon
+                    name='ios-heart'
+                    type='ionicon'
+                    size={30}
+                    color={tintColor}
+
+                    />
+                )
+            },
         },
+
         Categories: {
-            screen: Categories
+            screen: Categories,
+            navigationOptions: {
+                tabBarLabel: 'Categories',
+                tabBarIcon: ({ tintColor }) => (
+                    <Icon
+                    name='ios-list-box'
+                    type='ionicon'
+                    size={30}
+                    color={tintColor}
+
+                    />
+                )
+            },
         },
-        Plan: {
-            screen: Plan
+
+        Maps: {
+            screen: Maps,
+            navigationOptions: {
+                tabBarLabel: 'Map',
+                tabBarIcon: ({ tintColor }) => (
+                    <Icon
+                    name='ios-pin'
+                    type='ionicon'
+                    size={30}
+                    color={tintColor}
+
+                    />
+                )
+            },
         },
         Settings: {
-            screen: Settings
+            screen: Settings,
+            navigationOptions: {
+                tabBarLabel: 'Settings',
+                tabBarIcon: ({ tintColor }) => (
+                    <Icon
+                    name='ios-settings'
+                    type='ionicon'
+                    size={30}
+                    color={tintColor}
+
+                    />
+                )
+            },
         },
     },
 
@@ -33,9 +96,18 @@ const Tab = TabNavigator({
             },
             style: {
                 backgroundColor: '#181818',
+                
             },
             activeTintColor: '#980c0c'
         }
     });
 
+
+const styles = {
+    icon: {
+      width: 26,
+      height: 26,
+      color: 'yellow'
+    },
+  };
 export default Tab;

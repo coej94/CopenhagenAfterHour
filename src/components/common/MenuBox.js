@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
+import { Button } from './index';
+
 
 const MenuBox = () => {
     const { headline, backdropView, boxContainer, backdrop, miniBox, containerStyle } = styles;
     return (
         <View style={boxContainer}>
             <View style={containerStyle}>
-            <TouchableOpacity onPress={this._onPressButton}>
+            <TouchableOpacity onPress={() => Linking.openURL('http://www.google.com')}>
                 <View style={miniBox}>
                     <Image 
                     style={backdrop} 
@@ -19,7 +21,7 @@ const MenuBox = () => {
                 </TouchableOpacity>
                 
 
-                <TouchableOpacity onPress={this._onPressButton}>
+                <TouchableOpacity onPress={() => Linking.openURL('http://www.google.com')}>
                 <View style={miniBox}>
                     <Image 
                     style={backdrop} 

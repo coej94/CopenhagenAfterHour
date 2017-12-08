@@ -1,13 +1,13 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-const Plan = () => {
+const Maps = () => {
   return (
     <View>
       <Text>
-       Plan
+       Maps
       </Text>
     </View>
   );
 };
-export { Plan };
+export { Maps };
