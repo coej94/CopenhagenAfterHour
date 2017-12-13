@@ -1,13 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text, Image } from 'react-native';
+import { CategoriesList } from '../components/common';
 
 const Categories = () => {
   return (
-    <View>
-      <Text>
-       Categories
-      </Text>
-    </View>
+      <CategoriesList/>
   );
 };
 
