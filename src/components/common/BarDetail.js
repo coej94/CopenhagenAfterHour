@@ -47,7 +47,7 @@ const styles = {
         flexDirection: 'column',
         justifyContent: 'space-around'
     },
-    infoViewHeaderStyle: {
+    infoViewHeaderStyle: {
         fontSize: 18,
         color: '#f00'
     },
