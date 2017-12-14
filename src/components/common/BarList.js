@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import { BarDetail } from './BarDetail'
 import axios from 'axios';
 
@@ -17,11 +17,10 @@ class BarList extends Component {
     }
 
     render(){
-        console.log(this.state);
         return (
-            <View>
+            <ScrollView>
                 {this.renderBars()}
-            </View>
+            </ScrollView>
         );
     }
 };
