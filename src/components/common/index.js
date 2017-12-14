@@ -6,3 +6,5 @@ export * from './Input';
 export * from './Spinner';
 export * from './MenuBox';
 export * from './CategoriesList';
+export * from './BarList';
+export * from './BarDetail';

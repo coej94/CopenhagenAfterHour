@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { MenuBox } from '../components/common';
+import { BarList } from '../components/common';
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <Text style={styles.city}>
         København
       </Text>
-      <MenuBox />
+      <BarList />
     </View>
   );
 };
