@@ -1,19 +1,21 @@
 import React from 'react';
 import {Image, View, Text } from 'react-native';
-import { Card, CardSection } from '../common';
+import { Card, CardSection, Heart, Button } from '../common';
 
 const BarDetail = ({ bar }) => { //<-- bar is destructured out of props
-    const { photo, name, location } = bar;
+    const { photo, name, location, thumbnail } = bar;
     const { textStyle, 
             infoView, 
             infoViewHeaderStyle, 
             thumbnailContainerStyle, 
             thumbnailStyle,
-            imageStyle
+            imageStyle,
+            heartContainerStyle,
+            container
         } = styles;
     
     const firstAdd = location.address.split(',');
-    
+    //firstadd variable = first part of address string
     return (
         <Card> 
             <CardSection>
@@ -24,26 +26,37 @@ const BarDetail = ({ bar }) => { //<-- bar is destructured out of props
             </CardSection>
     
             <CardSection>
-                <View style={thumbnailContainerStyle}>
-                <Image
-                    style={thumbnailStyle}
-                    source={{ uri: `http://localhost:7777/uploads/${photo || 'store.png'}` }}
-                />
+                <View style={container}>
+                    <View style={thumbnailContainerStyle}>
+                    <Image
+                        style={thumbnailStyle}
+                        source={{ uri: `http://localhost:7777/uploads/${thumbnail || 'store.png'}` }}
+                    />
+                    </View>
+                    
+                    <View style={infoView}>
+                        <Text style={infoViewHeaderStyle}>{name}</Text>
+                        <Text style={textStyle}>{`${firstAdd[0]}`}</Text> 
+                    </View> 
+                    <View style={heartContainerStyle}>
+                        <Heart />
+                    </View>
                 </View>
-                <View style={infoView}>
-                    <Text style={infoViewHeaderStyle}>{name}</Text>
-                    <Text style={textStyle}>{`${firstAdd[0]}, ${firstAdd[1]}`}</Text>
-                </View> 
-            </CardSection>
+            </CardSection>  
         </Card>
     );
 };
 const styles = {
+    container: {
+        flex: 1,
+        flexDirection: 'row'
+    },
     textStyle: {
         color: '#fcfcfc'
     },
     
     infoView: {
+        flex:1,
         flexDirection: 'column',
         justifyContent: 'space-around'
     },
@@ -57,6 +70,10 @@ const styles = {
         marginLeft: 10,
         marginRight: 10
     },
+    Style: {
+        width: 50, 
+        height: 50
+    },
     thumbnailStyle: {
         width: 50, 
         height: 50
@@ -65,6 +82,9 @@ const styles = {
         height: 300,
          flex: 1,
          width: null
+    },
+    heartContainerStyle: {
+
     }
 };
 

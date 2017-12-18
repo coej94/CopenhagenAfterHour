@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ScrollView, View, Text } from 'react-native';
-import { BarDetail } from './BarDetail'
 import axios from 'axios';
+import { ScrollView } from 'react-native';
+import { BarDetail } from './BarDetail';
 
 class BarList extends Component {
     state = { bars: [] };
@@ -18,17 +18,11 @@ class BarList extends Component {
 
     render(){
         return (
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false} >
                 {this.renderBars()}
             </ScrollView>
         );
     }
-};
-
-const styles = {
-    textStyle: {
-        color: '#fff'
-    }
-};
+}
 
 export { BarList };

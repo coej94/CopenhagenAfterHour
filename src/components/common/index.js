@@ -8,3 +8,6 @@ export * from './MenuBox';
 export * from './CategoriesList';
 export * from './BarList';
 export * from './BarDetail';
+export * from './Heart';
+export * from './TagList';
+export * from './TagDetail';

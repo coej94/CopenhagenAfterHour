@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { BarList } from '../components/common';
+import { Header, BarList } from '../components/common';
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.city}>
+      <Header headerText='København'>
         København
-      </Text>
+      </Header>
       <BarList />
     </View>
   );
@@ -15,12 +15,10 @@ const Home = () => {
 
 const styles = {
   container: {
-    alignItems: 'center',
     flex: 1,
-    backgroundColor: '#242424'
+    backgroundColor: '#202020'
   },
   city: {
-    
     color: '#f4f4f4',
     fontSize: 50,
     marginTop: 40
