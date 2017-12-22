@@ -7,14 +7,12 @@ const TagDetail = ({ tag }) => {
     const { infoView, idStyle, textStyle } = styles;
     return (
         <Card>
-            <TouchableOpacity onPress={() => console.log(`hello from ${_id}`)}>
-                <CardSection>
-                    <View style={infoView}>
-                        <Text style={idStyle}>{_id}</Text>
-                        <Text style={textStyle}> Number of bars in this Category: {count} </Text>
-                    </View>
-                </CardSection>
-            </TouchableOpacity>
+            <CardSection>
+                <View style={infoView}>
+                    <Text style={idStyle}>{_id}</Text>
+                    <Text style={textStyle}> Number of bars in this Category: {count} </Text>
+                </View>
+            </CardSection>
         </Card>
     );
 };

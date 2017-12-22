@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, View, Text } from 'react-native';
-import { Card, CardSection, Heart, Button } from '../common';
+import { Card, CardSection, Heart, Button, GoToButton } from '../common';
 
 const BarDetail = ({ bar }) => { //<-- bar is destructured out of props
     const { photo, name, location, thumbnail } = bar;
@@ -19,10 +19,10 @@ const BarDetail = ({ bar }) => { //<-- bar is destructured out of props
     return (
         <Card> 
             <CardSection>
-                <Image 
-                    style={ imageStyle }
-                    source={{ uri: `http://localhost:7777/uploads/${photo || 'store.png'}` }}
-                />
+                    <Image 
+                        style={ imageStyle }
+                        source={{ uri: `http://localhost:7777/uploads/${photo || 'store.png'}` }}
+                    />
             </CardSection>
     
             <CardSection>
@@ -39,6 +39,7 @@ const BarDetail = ({ bar }) => { //<-- bar is destructured out of props
                         <Text style={textStyle}>{`${firstAdd[0]}`}</Text> 
                     </View> 
                     <View style={heartContainerStyle}>
+                        <GoToButton />
                         <Heart />
                     </View>
                 </View>
@@ -84,7 +85,8 @@ const styles = {
          width: null
     },
     heartContainerStyle: {
-
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     }
 };
 

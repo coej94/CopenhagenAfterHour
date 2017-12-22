@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import { CategoriesList, TagList } from '../components/common';
+import { CategoriesList, TagList, Header } from '../components/common';
 
 const Categories = () => {
   return (
      <View style={styles.container}>
+     <Header headerText='Categories'/>
       <TagList />
      </View>
   );

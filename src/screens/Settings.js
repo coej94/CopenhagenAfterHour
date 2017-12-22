@@ -1,26 +1,34 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import { Header } from '../components/common';
-
-const Settings = () => {
-  return (
-    <View style={styles.container}>
-      <Header headerText='Settings'>
-      </Header>
-    </View>
-  );
-};
-
-const styles = {
-  container: {
-    flex: 1,
-    backgroundColor: '#202020'
-  },
-  city: {
-    color: '#f4f4f4',
-    fontSize: 50,
-    marginTop: 40
+import React, { Component } from 'react';
+import { ScrollView, View } from 'react-native';
+import { List, ListItem } from 'react-native-elements';
+import { Header } from "../components/common";
+class Settings extends Component {
+  render() {
+    return (
+      <View>
+        <Header headerText='Settings'/>
+        <ScrollView>
+          <List>
+            <ListItem
+              title="Notifications"
+            />
+            <ListItem
+              title="Profile"
+            />
+            <ListItem
+              title="Password"
+            />
+          </List>
+          <List>
+            <ListItem
+              title="Sign Out"
+              rightIcon={{ name: 'cancel' }}
+            />
+          </List>
+        </ScrollView>
+      </View>
+    );
   }
-};
+}
 
 export { Settings };

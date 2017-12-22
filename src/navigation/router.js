@@ -1,17 +1,31 @@
 import React from 'react';
-import { TabNavigator } from 'react-navigation';
+import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import {
     Home,
     Favorites,
     Categories,
     Maps,
-    Settings
+    Settings,
+    BarDetail
 } from '../screens';
 
-const Tab = TabNavigator({
+
+export const HomeStack = StackNavigator({
+    Home: {
+        screen: Home,
+    },
+    Details: {
+        screen: BarDetail,
+    }
+}, {
+    mode: 'modal',
+    headerMode: 'none',
+});
+
+export const Tab = TabNavigator({
         Home: {
-            screen: Home,
+            screen: HomeStack,
             navigationOptions: {
                 tabBarLabel: 'Home',
                 tabBarIcon: ({ tintColor }) => (
@@ -86,7 +100,7 @@ const Tab = TabNavigator({
                     />
                 )
             },
-        },
+        }, 
     },
 
     {
@@ -101,5 +115,3 @@ const Tab = TabNavigator({
             activeTintColor: '#980c0c'
         }
     });
-
-export default Tab;

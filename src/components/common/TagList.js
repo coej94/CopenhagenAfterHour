@@ -20,7 +20,6 @@ class TagList extends Component {
     render() {
         return (
             <View>
-                <Header headerText="hej"/>
                 <ScrollView showsVerticalScrollIndicator={false} >
                     {this.renderTags()}
                 </ScrollView>
@@ -28,7 +27,5 @@ class TagList extends Component {
         );
     }
 }
-
-
 
 export { TagList };

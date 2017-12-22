@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import Tabs from './src/navigation/Tab';
+import { Tab } from './src/navigation/router';
 
 class App extends Component {
   render() {
-    return <Tabs />;
+    return (
+      <Tab />
+    );
   }
 }
 
