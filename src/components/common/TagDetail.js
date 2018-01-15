@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardSection } from '../common';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 const TagDetail = ({ tag }) => {
     const { _id, count } = tag;
@@ -29,6 +29,10 @@ const styles = {
         flex:1,
         flexDirection: 'column',
         justifyContent: 'space-around'
+    },
+    thumbnailStyle: {
+        width: 50, 
+        height: 50
     },
     textStyle: {
         color: '#fcfcfc'

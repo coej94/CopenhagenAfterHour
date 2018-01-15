@@ -86,21 +86,21 @@ export const Tab = TabNavigator({
                 )
             },
         },
-        Settings: {
-            screen: Settings,
-            navigationOptions: {
-                tabBarLabel: 'Settings',
-                tabBarIcon: ({ tintColor }) => (
-                    <Icon
-                    name='ios-settings'
-                    type='ionicon'
-                    size={30}
-                    color={tintColor}
+        // Settings: {
+        //     screen: Settings,
+        //     navigationOptions: {
+        //         tabBarLabel: 'Settings',
+        //         tabBarIcon: ({ tintColor }) => (
+        //             <Icon
+        //             name='ios-settings'
+        //             type='ionicon'
+        //             size={30}
+        //             color={tintColor}
 
-                    />
-                )
-            },
-        }, 
+        //             />
+        //         )
+        //     },
+        // }, 
     },
 
     {

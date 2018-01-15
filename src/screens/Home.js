@@ -6,7 +6,7 @@ import { BarDetail, Header } from '../components/common';
 class Home extends Component {
     state = { bars: [] };
     componentWillMount() {
-        axios.get('http://localhost:7777/jstores') //<-- change this when content comes online
+        axios.get('http://138.68.104.212:7777/jstores') //<-- change this when content comes online
         .then(response => this.setState({ bars: response.data }));
     }
 

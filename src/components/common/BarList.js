@@ -6,8 +6,11 @@ import { BarDetail } from './BarDetail';
 class BarList extends Component {
     state = { bars: [] };
     componentWillMount() {
-        axios.get('http://localhost:7777/jstores') //<-- change this when content comes online
-        .then(response => this.setState({ bars: response.data }));
+        axios.get('http://138.68.104.212:7777/jstores') //<-- change this when content comes online
+        .then(response => this.setState({ bars: response.data }))
+        .catch(error => {
+            console.log(error.response)
+        });
     }
 
     renderBars() {
@@ -16,7 +19,7 @@ class BarList extends Component {
         );
     }
 
-    render(){
+    render(){   
         return (
             <ScrollView showsVerticalScrollIndicator={false} >
                 {this.renderBars()}

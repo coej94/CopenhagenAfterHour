@@ -6,7 +6,7 @@ import { TagDetail, Header } from '../common';
 class TagList extends Component {
     state = { tags: [] };
     componentWillMount() {
-        axios.get('http://localhost:7777/jtags') //<-- change this when content comes online
+        axios.get('http://138.68.104.212:7777/jtags') //<-- change this when content comes online
         .then(response => this.setState({ tags: response.data }));
         
     }

@@ -21,7 +21,7 @@ const BarDetail = ({ bar }) => { //<-- bar is destructured out of props
             <CardSection>
                     <Image 
                         style={ imageStyle }
-                        source={{ uri: `http://localhost:7777/uploads/${photo || 'store.png'}` }}
+                        source={{ uri: `http://138.68.104.212:7777/uploads/${photo || 'store.png'}` }}
                     />
             </CardSection>
     
@@ -30,7 +30,7 @@ const BarDetail = ({ bar }) => { //<-- bar is destructured out of props
                     <View style={thumbnailContainerStyle}>
                     <Image
                         style={thumbnailStyle}
-                        source={{ uri: `http://localhost:7777/uploads/${thumbnail || 'store.png'}` }}
+                        source={{ uri: `http://138.68.104.212:7777/uploads/${thumbnail || 'store.png'}` }}
                     />
                     </View>
                     
